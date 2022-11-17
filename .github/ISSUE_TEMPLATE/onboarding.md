@@ -1,10 +1,7 @@
+---
 name: Onboarding request
-description: Onboarding request for CIO customers
+about: Onboarding request for CIO customers
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ATTACH CSV FILE
   - type: checkboxes
     id: environment
     attributes:
@@ -19,3 +16,6 @@ body:
       options:
         - label: stage-bdc-1
         - label: stage-lrk-1
+---
+
+ATTACH CSV FILE
