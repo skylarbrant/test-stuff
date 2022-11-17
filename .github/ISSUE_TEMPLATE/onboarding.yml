@@ -1,5 +1,5 @@
 name: Onboarding request
-about: Onboarding request for CIO customers
+description: Onboarding request for CIO customers
 body:
   - type: checkboxes
     id: environment
