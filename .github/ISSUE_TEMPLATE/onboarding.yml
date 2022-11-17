@@ -1,4 +1,3 @@
----
 name: Onboarding request
 about: Onboarding request for CIO customers
 body:
@@ -16,6 +15,3 @@ body:
       options:
         - label: stage-bdc-1
         - label: stage-lrk-1
----
-
-ATTACH CSV FILE
