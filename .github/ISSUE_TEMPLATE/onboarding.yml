@@ -1,0 +1,21 @@
+name: Onboarding request
+description: Onboarding request for CIO customers
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ATTACH CSV FILE
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: STAGE or PROD?
+      options:
+        - label: STAGE
+        - label: PROD
+  - type: checkboxes
+    id: cluster
+    attributes:
+      label: Cluster Destination
+      options:
+        - label: stage-bdc-1
+        - label: stage-lrk-1
