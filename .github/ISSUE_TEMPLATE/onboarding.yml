@@ -16,14 +16,14 @@ body:
         - label: stage-bdc-1
         - label: stage-lrk-1
   - type: input
-      id: contact
-      attributes:
-        label: email
-        description: Provide email address
-        placeholder: ex. email@example.com
-      validations:
-        required: false
-   - type: dropdown
+    id: contact
+    attributes:
+      label: email
+      description: Provide email address
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: dropdown
     id: version
     attributes:
       label: Version
