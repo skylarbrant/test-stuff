@@ -1,0 +1,32 @@
+name: Test YAML Action
+
+on:
+  issues:
+    types:
+      [labeled]
+
+env:
+  ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+jobs:
+  test:
+   runs-on: self-hosted
+   name: Extract Payload
+   
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v3
+       
+     - name: Parse Issue Body
+       uses: peter-murray/issue-body-parser-action@v2.0.1
+       id: issue_body_parser
+       with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         issue_id: $ISSUE_NUMBER
+         payload: yaml
+     
+     - name: Use Parsed Values
+       env:
+         DATA: ${{ steps.issue_body_parser.outputs.payload }}
+       run: >
+         echo "$DATA\n"
